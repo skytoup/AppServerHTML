@@ -1,0 +1,40 @@
+
+.normal {
+  margin-bottom: 15px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.avatar {
+  align-self: center;
+  min-width: 90px;
+  min-height: 90px;
+  border-radius: 50%;
+  background-size: 90px;
+}
+
+.info {
+  margin: 0 25px 0 25px;
+  flex: 1;
+}
+
+.title {
+  text-overflow:ellipsis;
+  overflow:hidden;
+  min-width: 150px;
+  font-size: 28px;
+  white-space: nowrap;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  zoom: 1.5;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,25 @@
+
+.normal {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload {
+  flex: 1;
+  height: 75px;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.radioGroup {
+}
+
+.search {
+  flex: 1;
+  margin-left: 30px;
+  align-self: center;
+}
+
+.loadMoreBtn {
+  height: 45px;
+}

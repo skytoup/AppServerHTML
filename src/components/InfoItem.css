@@ -1,0 +1,12 @@
+
+.normal {
+  word-break:break-all;
+}
+
+.title {
+  font-size: 16px;
+}
+
+.content {
+  font-size: 14px;
+}
