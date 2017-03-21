@@ -22,7 +22,7 @@ class AppInfo extends React.Component {
     const isiOS = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) && (data.type === 0) ;
     const tip = isiOS ? (
       <div style={{marginTop: 15}}>
-        <a href="static/cer/ca.cer">Tip: iOS安装时应用时, 需要先安装和信任证书, 点击这里进行安装</a>
+        <a href="static/cer/ca.cer">Tip: iOS安装时应用时, 需要先安装证书, 请点击这里进行安装。iOS9以上还需要到设置里面信任证书</a>
       </div>
     ) : null;
     // 进入编辑界面时, 渲染的是children

@@ -69,7 +69,12 @@ class Apps extends React.Component {
                    if (status === 'done') {
                      dispatch({type: 'upload/cancelUpload'});
                      message.success(`${info.file.name} 文件上传成功.`);
-                     dispatch({type: 'apps/fetch', payload: {page: 1, type: type, keywords: null}});
+                     let data = info.file.response.datas;
+
+                     if (data && (type === 'all' || {iOS: 0, android: 1}[type] === data.type)) {
+                       dispatch({type: 'apps/addUploadPackage', payload: {data}})
+                     }
+                     /*dispatch({type: 'apps/fetch', payload: {page: 1, type: type, keywords: null}});*/
                    } else if (status === 'error') {
                      message.error(`${info.file.name} 文件上传失败.`);
                      dispatch({type: 'upload/cancelUpload'});

@@ -18,6 +18,9 @@ export default {
     saveDatas(state, {payload: {datas, time}}) {
       return {...state, datas, page: 1, time, hasMore: true};
     },
+    addPackage(state, {payload: {data}}) {
+      return {...state, datas: [data, ...state.datas]};
+    },
     editApp(state, {payload: {id, modify}}) {
       const datas = state.datas.map(app => {
         if (app.id === id) {
@@ -79,6 +82,9 @@ export default {
       } else {
         yield put({type: 'loadMoreData', payload: {datas: result.datas}});
       }
+    },
+    *addUploadPackage({payload}, {put, call, select}) {
+      yield put({type: 'addPackage', payload})
     },
     *delete({payload: {id}}, {put, call, select}) {
       const result = yield app.del(id);
